@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+	<link rel="stylesheet" href="demos/real-estate/css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="one-page/css/et-line.css" type="text/css" />
+	<link rel="stylesheet" href="demos/medical/css/medical-icons.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Modal Dialog boxes
+		CSL - Reference: https://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/
+	============================================= -->
+
+	<div id="openModalSched" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Intuitive Schedule Manager</h2>
+			<img src="images/Scheduler.png"  alt="Scheduler.png" title="Scheduler.png" align="right" hspace="5" vspace="5">
+			<h4>Easily select shifts to view their contents with the option to swap if necessary.</h4>
+		</div>
+	</div>
+
+	<div id="openModalManage" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Advanced Admin Panel</h2>
+			<img src="images/Manage.png"  alt="manage.png" title="manage.png" align="right" hspace="5" vspace="5">
+			<h4>As an manager, you can add batches of employees and determine their pay. Additionally, you can set a location for the app to geofence and directly pay employees.</h4>
+		</div>
+	</div>
+
+<div id="openModalShift" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Instant Shift Change Requests</h2>
+			<img src="images/Exchange.png"  alt="Exchange.png" title="Exchange.png" align="right" hspace="5" vspace="5">
+			<h4>An employee can select a shift and person to swap with. Once doing so, emails are automatically sent to both parties and the manager to approve.</h4>
+		</div>
+	</div>
+
+
+
+<div id="openModalPay" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Granular Payroll Control</h2>
+			<img src="images/GranularPay.png"  alt="Pay.png" title="Pay.png" align="right" hspace="5" vspace="5">
+			<h4>Directly pay individual employees as a manager.</h4>
+		</div>
+	</div>
+
+	<div id="openModalPayShift" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Payroll Generation from Shifts</h2>
+			<img src="images/Pay.png"  alt="Pay.png" title="Pay.png" align="right" hspace="5" vspace="5">
+			<h4>Auto-generated paychecks based on shifts.</h4>
+		</div>
+	</div>
+
+	<div id="openModalStripe" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Direct Deposit</h2>
+			<img src="images/Stripe.png"  alt="Pay.png" title="Pay.png" align="right" hspace="5" vspace="5">
+			<h4>Easily set up direct deposit with Stripe for employees</h4>
+		</div>
+	</div>
+
+	<div id="openModalEmail" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Email and Live Support</h2>
+			<img src="images/intercom.png"  alt="Intercom.png" title="Intercom.png" align="right" hspace="5" vspace="5">
+			<h4>Ask any question to our support theme and get rapid responses.</h4>
+		</div>
+	</div>
+
+
+
+
+	<!-- Document Title
+	============================================= -->
+	<title>Our Product | PayLoc</title>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+				============================================= -->
+				<header id="header" class="transparent-header full-header" data-sticky-class="not-dark">
+
+					<div id="header-wrap">
+
+						<div class="container clearfix">
+
+							<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+							<!-- Logo
+							============================================= -->
+							<div id="logo">
+								<a href="index.html" class="standard-logo" data-dark-logo="images/PayLoc_White.png"><img src="images/PayLoc_Reg.png" alt="Canvas Logo"></a>
+								<a href="index.html" class="retina-logo" data-dark-logo="images/PayLoc_White@2x.png"><img src="images/PayLoc_Reg@2x.png" alt="Canvas Logo"></a>
+							</div><!-- #logo end -->
+
+							<!-- Primary Navigation
+							============================================= -->
+							<nav id="primary-menu" class="dark">
+
+								<ul>
+									<li class="current"><a href="index.html"><div>Home</div></a>
+									<li class="current"><a href="landing.html"><div>Services</div></a>
+
+									<li class="current"><a href="about.html"><div>About Us</div></a>
+									<li class="current"><a href="contact.html"><div>Contact</div></a>
+
+
+								</ul>
+
+
+							</nav><!-- #primary-menu end -->
+
+						</div>
+
+					</div>
+
+				</header><!-- #header end -->
+
+		<!-- Page Title
+		============================================= -->
+		<section id="page-title">
+
+			<div class="container clearfix">
+				<h1>Services</h1>
+				<span>Amazing resources for human resources.</span>
+				<ol class="breadcrumb">
+					<li><a href="#">Home</a></li>
+					<li class="active">Services</li>
+				</ol>
+			</div>
+
+		</section><!-- #page-title end -->
+
+		<!-- Content
+		============================================= -->
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap">
+
+				<div class="container clearfix">
+
+					<div class="col_two_third topmargin nobottommargin">
+
+						<div style="position: relative;" data-height-lg="535" data-height-md="442" data-height-sm="338" data-height-xs="316" data-height-xxs="201">
+							<img data-animate="fadeInLeft" src="images/landing/device1.png" alt="Mac" style="position: absolute; top: 0; left: 0;">
+						</div>
+
+					</div>
+
+					<div class="col_one_third topmargin nobottommargin col_last">
+
+						<h3>Short Overview.</h3>
+
+						<p>PayLoc aims to be the only platform your business needs to manage its employees. Our platform provides managers with the intuitive payroll and schedule management tools they need to efficiently keep track of everyone within their business, without all the extra hassle. And with our additional innovative features such as our digital punchcard system and smart schedule algorithms, PayLoc will help you bring all of your critical business management tasks into the 21st century and simplify them, allowing you to boost productivity and rest easy. PayLoc has your back.</p>
+
+						<div class="divider divider-short"><i class="icon-circle"></i></div>
+
+						<ul class="iconlist iconlist-large iconlist-color">
+							<li><i class="icon-ok-sign"></i> Interactive calendar view</li>
+							<li><i class="icon-ok-sign"></i> Punchcard mobile app with geofencing</li>
+							<li><i class="icon-ok-sign"></i> Easy and smart shift change requests</li>
+							<li><i class="icon-ok-sign"></i> Auto-populate thousands of shifts</li>
+							<li><i class="icon-ok-sign"></i> Payroll generation from shifts</li>
+							<li><i class="icon-ok-sign"></i> Pay individually or with a spreadsheet</li>
+							<li><i class="icon-ok-sign"></i> Direct deposit</li>
+						</ul>
+
+					</div>
+
+					<div class="clear"></div>
+
+					<div class="divider divider-short divider-center"><i class="icon-circle"></i></div>
+
+				<div class="container clearfix">
+
+					<div class="col_two_fifth">
+						<img data-animate="fadeInLeft" src="images/Scheduler.png" alt="PayLoc Scheduler" class="center-block">
+					</div>
+
+					<div class="col_three_fifth nobottommargin col_last">
+
+						<div class="heading-block">
+							<h3>Efficient scheduling makes efficient businesses.</h3>
+							<span>PayLoc saves employers hours of valuable time by digitizing employee scheduling.</span>
+						</div>
+
+						<p>While employee scheduling is widely regarded as one of the most important tasks of a business manager, it can also be one of the most time-consuming, eating up hours and hours of time that could be saved if not for outdated and inefficient scheduling practices. PayLoc’s schedule management platform aims to automate much of the schedule management process and greatly reduce stress for managers, while maintaining ease of use that employees and managers alike will love.</p>
+
+						<p>Managers will be able to populate weekly schedules with shifts in mere minutes, and instantaneously make it visible to all employees. Our system allows for employees to quickly perform actions on their schedule, such as requesting shift changes, and allows managers to easily approve or deny them with the push of a button. What used to take endless hours now takes mere minutes with the digitization of the employee schedule, so you can focus on growing your business and making it great.</p>
+
+						<a href="timeline.html">Learn more &rarr;</a>
+
+					</div>
+
+					<div class="clear"></div><div class="line"></div>
+
+					<div class="col_two_fifth">
+						<img data-animate="fadeInLeft" src="images/GranularPay.png" alt="PayLoc Scheduler" class="center-block">
+					</div>
+
+					<div class="col_three_fifth">
+
+						<div class="heading-block">
+							<h3>Powerful payroll tools. </h3>
+							<span>Benchmarking your website's performance helps you make great choices for your business.</span>
+						</div>
+
+						<p>Our powerful payroll engine supports a vast number of standard features, such as mailing checks, auto-wage calculation, wage garnishment, tax withholding, and centralized payment. Additionally, we go above and beyond with our mission to digitize the HR industry with extra features that tie directly into our scheduler platform, such as a self-service portal for employees with payout settings, an integrated login feature, and complete integration with scheduler platforms. With our enhanced ecosystem of products, you can manage everything at your fingertips.</p>
+
+						<a href="timeline.html">Learn more &rarr;</a>
+
+					</div>
+
+					<div class="col_two_fifth topmargin col_last" style="min-height: 350px">
+						<canvas id="chart-radar"></canvas>
+					</div>
+
+					<div class="line"></div>
+
+					<div class="col_two_fifth bottommargin">
+						<img data-animate="fadeInLeft" src="images/payloc_app.png" alt="iPhone" class="center-block">
+					</div>
+
+					<div class="col_three_fifth nobottommargin col_last">
+
+						<div class="heading-block">
+							<h3>Say hello to a new type of punchcard.</h3>
+							<span>PayLoc's mobile app helps you and your employees better keep track of time.</span>
+						</div>
+
+						<p>The PayLoc mobile app introduces a new type of digital punchcard that will dramatically increase efficiency in employee time tracking. The app allows employees to clock in and out of their shifts, and integrates with geofencing technology to ensure that they are actually on-site when they do. It sends periodic alerts to employees’ devices reminding them of when they should clock in and clock out for every shift. And all of this synchronizes with our scheduler and payroll platforms as well, making preparing timesheets a breeze.</p>
+
+						<a href="timeline.html">Learn more &rarr;</a>
+
+					</div>
+
+				</div>
+
+	<div class="divider divider-short divider-center"><i class="icon-circle"></i></div>
+
+	<div id="section-pricing" class="heading-block title-center nobottomborder page-section">
+		<h2>Pricing Details</h2>
+		<span>Flexible &amp; Affordable Pricing for Any Type of Business</span>
+	</div>
+
+	<div class="pricing-box pricing-extended clearfix">
+
+		<div class="pricing-desc">
+			<div class="pricing-title">
+				<h3>Basic Plan</h3>
+			</div>
+			<div class="pricing-features">
+				<ul class="iconlist-color clearfix">
+					<li><i class="icon-calendar3"></i> <a href="#openModalSched">Intuitive Schedule Manager</a></li>
+					<li><i class="icon-eye-open"></i> <a href= "#openModalShift"> Instant Shift Change Requests</a></li>
+					<li><i class="icon-cogs"></i> <a href="#openModalManage">Advanced Admin Panel</a></li>
+					<li><i class="icon-et-clock"></i><a href="#openModalPayShift"> Payroll Generation from Shifts</a></li>
+					<li><i class="icon-money"></i> <a href="#openModalPay">Granular Payroll Control</a></li>
+					<li><i class="icon-realestate-check"></i> <a href="#openModalStripe">Direct Deposit</a></li>
+					<li><i class="icon-line2-question"></i> <a href="#openModalEmail">Email &amp; Live Support</a> </li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="pricing-action-area">
+			<div class="pricing-meta">
+				As Low as
+			</div>
+			<div class="pricing-price">
+				<span class="price-unit">&dollar;</span>5<span class="price-tenure">monthly</span>
+			</div>
+			<div class="pricing-action">
+				<a href="#" class="button button-3d button-large btn-block nomargin">Get Started</a>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="pricing-box pricing-extended bottommargin clearfix">
+
+		<div class="pricing-desc">
+			<div class="pricing-title">
+				<h3>Advanced Plan</h3>
+				<h3><small><i>All of that, plus...</i></small></h3>
+			</div>
+			<div class="pricing-features">
+				<ul class="iconlist-color clearfix">
+					<li><i class="icon-et-phone"></i> Digital Punchcard App</li>
+					<li><i></i></li>
+					<li><i class="icon-et-lightbulb"></i> Smart Shift Suggester</li>
+					<li><i></i></li>
+					<li><i class="icon-users"></i> Priority Customer Support</li>
+					<li><i></i></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="pricing-action-area">
+			<div class="pricing-meta">
+				As Low as
+			</div>
+			<div class="pricing-price">
+				<span class="price-unit">&dollar;</span>7.50<span class="price-tenure">monthly</span>
+			</div>
+			<div class="pricing-action">
+				<a href="#" class="button button-3d button-large btn-block nomargin">Get Started</a>
+			</div>
+		</div>
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap clearfix">
+
+					<div class="col_two_third">
+
+						<div class="col_one_third">
+
+							<div class="widget clearfix">
+
+								<img src="images/PayLoc_WhiteSkinny.png" alt="" class="footer-logo">
+
+								<p>We aim to make outdated business practices obsolete and save <strong>Money</strong> <strong>and</strong> <strong>Time</strong> for business managers and employees.</p>
+
+								<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
+									<address>
+										<strong>Headquarters:</strong><br>
+										410 Memorial Dr<br>
+										Cambridge, MA 02139<br>
+									</address>
+									<!--<abbr title="Phone Number"><strong>Phone:</strong></abbr> (91) 8547 632521<br>
+									<abbr title="Fax"><strong>Fax:</strong></abbr> (91) 11 4752 1433<br>-->
+									<abbr title="Email Address"><strong>Email:</strong></abbr> hello@payloc.io
+								</div>
+
+							</div>
+
+						</div>
+
+
+					</div>
+<!--
+					<div class="col_one_third col_last">
+
+						<div class="widget clearfix" style="margin-bottom: -20px;">
+
+							<div class="row">
+
+								<div class="col-md-6 bottommargin-sm">
+									<div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
+									<h5 class="nobottommargin">Total Downloads</h5>
+								</div>
+
+								<div class="col-md-6 bottommargin-sm">
+									<div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+									<h5 class="nobottommargin">Clients</h5>
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="widget subscribe-widget clearfix">
+							<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+							<div class="widget-subscribe-form-result"></div>
+							<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
+								<div class="input-group divcenter">
+									<span class="input-group-addon"><i class="icon-email2"></i></span>
+									<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+									<span class="input-group-btn">
+										<button class="btn btn-success" type="submit">Subscribe</button>
+									</span>
+								</div>
+							</form>
+						</div>
+-->
+						<div class="widget clearfix" style="margin-bottom: -20px;">
+
+							<div class="row">
+
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+
+				<div class="container clearfix">
+
+					<div class="col_half">
+						Copyrights &copy; 2017 All Rights Reserved by PayLoc Corporation.<br>
+						<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+					</div>
+
+					<div class="col_half col_last tright">
+					<!--
+						<div class="fright clearfix">
+							<a href="#" class="social-icon si-small si-borderless si-facebook">
+								<i class="icon-facebook"></i>
+								<i class="icon-facebook"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-twitter">
+								<i class="icon-twitter"></i>
+								<i class="icon-twitter"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-gplus">
+								<i class="icon-gplus"></i>
+								<i class="icon-gplus"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-pinterest">
+								<i class="icon-pinterest"></i>
+								<i class="icon-pinterest"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-vimeo">
+								<i class="icon-vimeo"></i>
+								<i class="icon-vimeo"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-github">
+								<i class="icon-github"></i>
+								<i class="icon-github"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-yahoo">
+								<i class="icon-yahoo"></i>
+								<i class="icon-yahoo"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-linkedin">
+								<i class="icon-linkedin"></i>
+								<i class="icon-linkedin"></i>
+							</a>
+						</div>
+
+						-->
+
+						<div class="clear"></div>
+
+						<i class="icon-envelope2"></i> hello@payloc.io
+					</div>
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script type="text/javascript" src="js/functions.js"></script>
+
+	<!-- Charts JS
+	============================================= -->
+	<script type="text/javascript" src="js/chart.js"></script>
+	<script type="text/javascript" src="js/chart-utils.js"></script>
+
+	<script type="text/javascript">
+
+		var randomScalingFactor = function() {
+			return Math.round(Math.random() * 100);
+		};
+
+		var config = {
+			type: 'doughnut',
+			data: {
+				datasets: [{
+					data: [
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+					],
+					backgroundColor: [
+						window.chartColors.red,
+						window.chartColors.orange,
+						window.chartColors.yellow,
+						window.chartColors.green,
+						window.chartColors.blue,
+					],
+					label: 'Dataset 1'
+				}],
+				labels: [
+					"Red",
+					"Orange",
+					"Yellow",
+					"Green",
+					"Blue"
+				]
+			},
+			options: {
+				responsive: true,
+				legend: {
+					display: false,
+					position: 'top',
+				},
+				title: {
+					display: false,
+					text: 'Doughnut Chart'
+				},
+				animation: {
+					animateScale: true,
+					animateRotate: true
+				}
+			}
+		};
+
+
+		// Radar Chart
+
+		var color = Chart.helpers.color;
+		var configRadar = {
+			type: 'radar',
+			data: {
+				labels: [["Eating", "Dinner"], ["Drinking", "Water"], "Sleeping", ["Designing", "Graphics"], "Coding", "Cycling", "Running"],
+				datasets: [{
+					label: "My First dataset",
+					backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
+					borderColor: window.chartColors.red,
+					pointBackgroundColor: window.chartColors.red,
+					data: [
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor()
+					]
+				}, {
+					label: "My Second dataset",
+					backgroundColor: color(window.chartColors.blue).alpha(0.2).rgbString(),
+					borderColor: window.chartColors.blue,
+					pointBackgroundColor: window.chartColors.blue,
+					data: [
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor()
+					]
+				},]
+			},
+			options: {
+				legend: {
+					display: false
+				},
+				title: {
+					display: false
+				},
+				scale: {
+				  ticks: {
+					beginAtZero: true
+				  }
+				}
+			}
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById("chart-doughnut").getContext("2d");
+			window.myDoughnut = new Chart(ctx, config);
+			window.myRadar = new Chart(document.getElementById("chart-radar"), configRadar);
+		};
+
+	</script>
+
+</body>
+</html>
