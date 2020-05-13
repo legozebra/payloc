@@ -1,0 +1,31 @@
+<% include ../partials/header.html %>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="../img/logo.png" alt="PayLoc" style="width:310px;height:90px;">
+    </div>
+    <div class="login-page">
+      <div class="form">
+        <form class="login-form" id="login-form" onsubmit="return submitForm(e)">
+          <div class="appDescription">
+            <p>Sign in to <%- appDescription %></p>
+          </div>
+          <div class="form-group">
+            <input type="text" id="username" placeholder="Email / User ID" />
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" placeholder="Password" />
+          </div>
+          <button type="button" id="loginBtn" ><strong><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Sign In</strong></button>
+          <p class="message"> <a href="http://help.payloc.io/settings/forgot-username-or-password" target="_blank">I forgot my User ID or Password</a></p>
+          <p></p>
+          <div style="display: none">
+            <input type="submit" onclick="return submitForm(e)">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<% include ../partials/header.html %>
+<script>
+ window.username = '<%- username %>'
+</script>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="/img/logo.png" alt="PayLoc" style="width:310px;height:90px;">
+    </div>
+    <div class="mgmt-page">
+      <form class="form-horizontal">
+        <div class="mgmt-form">
+          <div class="appDescription">
+            <p>Delete <%- name %></p>
+          </div>
+            <div class="alert alert-danger" role="alert"><p><strong>WARNING!</strong></p>
+              <p>
+                Deleting a user would automatically remove all references to this user. There's no way back.
+              </p>
+              <p>
+                Please type the username of the user being deleted to confirm.
+              </p>
+            </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Username (<%- username %>)</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="username" placeholder="Enter the username here..." required="required" value="" />
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary" id="goBack">Cancel</button>
+
+          <button type="button" class="btn btn-danger" id="deleteUser"><strong>PERMANENTLY DELETE <%- nameUpper %></strong></button>
+
+
+          <p></p>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

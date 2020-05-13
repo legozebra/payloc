@@ -1,0 +1,67 @@
+<% include ../partials/header.html %>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="/img/logo.png" alt="PayLoc" style="width:310px;height:90px;">
+    </div>
+    <div class="mgmt-page">
+      <form class="form-horizontal">
+        <div class="mgmt-form">
+          <div class="appDescription">
+            <p>Create New User</p>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="name" placeholder="Name" required="required" value="" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="username" class="col-sm-2 control-label">E-Mail</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="username" placeholder="Username" required="required" value="" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="accessLevel" class="col-sm-2 control-label">Access Level</label>
+            <div class="col-sm-9">
+              <select class="form-control" id="accessLevel">
+                <option value="0">Manager</option>
+                <option value="99" selected="selected">User</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="hourlyRate" class="col-sm-2 control-label">Hourly Pay Rate</label>
+            <div class="col-sm-9">
+              <div class="input-group">
+                <div class="input-group-addon">$</div>
+                <input type="text" class="form-control" id="hourlyRate" placeholder="" required="required" value="" />
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone" class="col-sm-2 control-label">Phone Number</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="phone" placeholder="" required="required" value="" />
+            </div>
+          </div>
+          <button type="button" class="btn" id="goBack"><strong>Cancel</strong></button>
+          <button type="button" class="btn btn-primary" id="actionBtn"><strong>Create</strong></button>
+          <p></p>
+<!--
+          <div class="row">
+            <small>
+              <h6>
+                <p>You may be required to withhold a certain amount of money for IRS from your employee's income. <br>
+                  You can use <a href="https://www.irs.gov/pub/irs-pdf/fw4.pdf">Form W-4</a> to calculate tax withholding.
+                  Please consult your accountant for more information. </p>
+              </h6>
+            </small>
+          </div> -->
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

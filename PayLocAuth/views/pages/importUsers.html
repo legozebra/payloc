@@ -1,0 +1,27 @@
+<% include ../partials/header.html %>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="/img/logo.png" alt="PayLoc" style="width:310px;height:90px;">
+    </div>
+    <div class="mgmt-page">
+      <form class="form-horizontal" method="post" action="/admin/import" enctype="multipart/form-data">
+        <div class="mgmt-form">
+          <div class="appDescription">
+            <p>Import Users</p>
+          </div>
+          <div class="form-group">
+            <label for="csvFile" class="col-sm-2 control-label">Import CSV File</label>
+            <div class="col-sm-9">
+              <input type="file" class="form-control" id="csvFile" name="csvFile" required="required" />
+            </div>
+          </div>
+          <button type="button" class="btn" id="goBack"><strong>Cancel</strong></button>
+          <input type="submit" class="btn btn-primary" value="Import" >
+          <p></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

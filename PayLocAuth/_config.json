@@ -1,0 +1,42 @@
+{
+  "enabled": true,
+  "dev": true,
+  "userSalt": "LLLLL",
+  "portInDev": 3000,
+  "database": {
+    "address": "localhost",
+    "port": 27017,
+    "databaseName": "PayLoc",
+    "auth": {
+      "enabled": false,
+      "username": "username",
+      "password": "password"
+    },
+    "PROD_connectionString": ""
+  },
+  "ticketExpiration": 30,
+  "auth": {
+    "appID": "",
+    "appSecret": ""
+  },
+  "support": {
+    "appID": "",
+    "appSecret": ""
+  },
+  "stripe": {
+    "stripeSk": "",
+    "stripePk": "",
+    "stripeClientId": ""
+  },
+  "sales": {
+    "defaultProductID": "PAYROLL_BASE",
+    "defaultUpsaleProductID": "PAYROLL_PREMIUM",
+    "defaultQuantity": 10,
+    "minimumSubscribeUser": 5
+  },
+  "schedulerAddress": "http://localhost:3001",
+  "twilio": {
+    "accountSid": "",
+    "authToken": ""
+  }
+}

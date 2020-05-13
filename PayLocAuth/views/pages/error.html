@@ -1,0 +1,28 @@
+<% include ../partials/header.html %>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="../img/logo.png" alt="PayLoc" style="width:310px;height:90px;">
+    </div>
+    <div class="login-page">
+      <div class="form">
+          <div class="appDescription">
+            <p>Error</p>
+          </div>
+          <div class="form-group">
+            <%- errorMessage %>
+          </div>
+          <hr>
+          <div class="form-group" style="color: red">
+            Please try again or contact us at <a href="mailto:support@payloc.io?subject=BugFeedback - <%- errorMessage %>&body=<%- errorMessage %>. %0D%0A%0D%0A Please describe below how you encountered this bug. We apprecriate your report and we will try to respond as soon as possible.">support@payloc.io</a>.
+          </div>
+          <div class="form-group">
+            We apologize for any inconvenience.
+          </div>
+          <p></p>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

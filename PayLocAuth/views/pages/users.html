@@ -1,0 +1,35 @@
+<% include ../partials/header.html %>
+<!--<script src="../js/jquery.dynatable.js"></script>-->
+<!--<link rel="stylesheet" type="text/css" href="../css/jquery.dynatable.css">-->
+
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="../img/logo.png" alt="PayLoc" style="width:310px;height:90px;">
+    </div>
+    <div class="mgmt-page">
+      <div class="mgmt-form">
+        <form>
+          <div class="appDescription">
+            <p>User Management</p>
+          </div>
+            <table id="table" class="table">
+              <thead>
+                <th color="black">Name</th>
+                <th>Username</th>
+                <th>Access Level</th>
+                <th>Edit</th>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+
+        </form>
+        <hr>
+        <button type="button" class="btn btn-primary" id="create"><strong>Create New User</strong></button>
+        <button type="button" class="btn btn-primary" id="logout"><strong>Logout</strong></button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
