@@ -1,0 +1,32 @@
+{
+  "enabled": true,
+  "dev": true,
+  "userSalt": "LLLLL",
+  "portInDev": 3001,
+  "database": {
+    "address": "localhost",
+    "port": 27017,
+    "databaseName": "PayLoc",
+    "auth": {
+      "enabled": false,
+      "username": "username",
+      "password": "password"
+    },
+    "PROD_connectionString": ""
+  },
+  "auth": {
+    "appID": "",
+    "appSecret": "",
+    "authEndpoint": "http://localhost:3000"
+  },
+  "sparkPostToken": "",
+  "sparkPostWebhookToken": "",
+  "lobKey": "",
+  "lobProdKey": "",
+  "stripeSk": "",
+  "stripePk": "",
+  "stripeClientId": "",
+  "baseProductId": "PAYROLL_BASE",
+  "premiumProductId": "PAYROLL_PREMIUM",
+  "intercomHMACSecret": ""
+}

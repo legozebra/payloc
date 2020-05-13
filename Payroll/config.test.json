@@ -1,0 +1,32 @@
+{
+  "enabled": true,
+  "dev": false,
+  "userSalt": "TestEnvironmentFallbackSalt",
+  "portInDev": 3001,
+  "database": {
+    "address": "PROD_connectionString",
+    "port": 27017,
+    "databaseName": "PayLoc",
+    "auth": {
+      "enabled": true,
+      "username": "sandbox@admin",
+      "password": "KIs4BEA8KAs8pkfZ"
+    },
+    "PROD_connectionString": "mongodb://sandbox:KIs4BEA8KAs8pkfZ@cluster0-shard-00-00-74usk.mongodb.net:27017,cluster0-shard-00-01-74usk.mongodb.net:27017,cluster0-shard-00-02-74usk.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin"
+  },
+  "auth": {
+    "appID": "",
+    "appSecret": "",
+    "authEndpoint": "http://localhost:3000"
+  },
+  "sparkPostToken": "",
+  "sparkPostWebhookToken": "",
+  "lobKey": "",
+  "lobProdKey": "",
+  "stripeSk": "",
+  "stripePk": "",
+  "stripeClientId": "",
+  "baseProductId": "PAYROLL_BASE",
+  "premiumProductId": "PAYROLL_PREMIUM",
+  "intercomHMACSecret": ""
+}
