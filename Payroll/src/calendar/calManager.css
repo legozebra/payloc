@@ -1,0 +1,7 @@
+.container {
+    width: 100%;
+    max-width: unset;
+}
+.settingsPage{
+    padding-left: 310px !important;
+}
