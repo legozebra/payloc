@@ -1,0 +1,35 @@
+<% include ../partials/header.html %>
+<% include ../partials/settings.html %>
+<script src="../js/jquery.dynatable.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/jquery.dynatable.css">
+
+
+<h5>Run Payroll</h5>
+  <p>These payment values are pre-populated using the pay rate set in the organization settings. Please ensure the payment amount is accurate and click Continue to proceed to preview page. </p>
+<form id="payroll">
+  <table id="table" class="table striped">
+    <thead>
+      <th color="black">Name</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Overtime</th>
+      <th>Pretax Payment</th>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</form>
+<div class="row">
+  <button class="btn waves-effect waves-light" id="action">Continue</button>
+</div>
+
+<div class="row" id="issues">
+
+</div>
+
+<div class="row">
+  <button class="btn waves-effect waves-light" id="config">Configure Payroll</button>
+</div>
+
+
+<% include ../partials/footer.html %>

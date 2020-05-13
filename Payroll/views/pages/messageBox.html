@@ -1,0 +1,14 @@
+<% include ../partials/header.html %>
+  <script>
+  $(document).ready(function() {
+    swal({
+      title: "<%- title -%>",
+      text: "<%- message -%>",
+      type: "<%- style -%>"
+    },
+    function(){
+      window.location.replace("<%- location -%>")
+    });
+  })
+  </script>
+<% include ../partials/footer.html %>

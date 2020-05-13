@@ -1,0 +1,33 @@
+<ul id="slide-out" class="side-nav fixed collapsible">
+    <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+            <li><a href="/scheduler/manager">Manage Schedule</a></li>
+            <li>
+                <% var regex = /\/payroll\//gi; %>
+                <a class="collapsible-header<%if (regex.test(url)) { %> active<% } %>">Payroll<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a href="/payroll/">Run Payroll</a></li>
+                        <li><a href="/payroll/history">Payroll History</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <% var regex = /\/settings\//gi; %>
+                <a class="collapsible-header<%if (regex.test(url)) { %> active<% } %>">Settings<i class="material-icons">arrow_drop_down</i></a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li<%if (url === '/settings/payroll/org' && premiumProduct) { %> class="active" <% } %>><a href="/settings/payroll/org">Payroll Settings</a></li>
+                        <li><a href="/settings/attendance">Geofencing</a></li>
+                        <li><a href="/settings/users" target="_blank">Employees</a></li>
+                        <li><a href="/settings/advanced">Advanced Settings</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </li>
+</ul>
+<!--<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>-->
+</div>
+<div class="settingsPage">

@@ -1,0 +1,39 @@
+<% include ../partials/header.html %>
+<% include ../partials/settings.html %>
+<div class="row">
+<h5>Advanced Settings</h5>
+</div>
+<div class="row">
+<p>These settings allow finer control over your payroll system. Please only enable a setting if you understand its meaning or instructed by PayLoc Support. </p>
+</div>
+<div class="row" id="advancedSettings">
+  <div class="row">
+    <div class="col s4">
+      <input type="checkbox" id="testmode"<%= TestMode -%> />
+      <label for="testmode">Test Mode</label>
+    </div>
+    <div class="col s8">
+      <p>
+        Payroll made in test mode will not actually occur any payment. Learn More about Test Mode
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s4">
+      <input type="checkbox" id="oneAddressMode"<%= oneAddressMode -%> />
+      <label for="oneAddressMode">Deliver all checks to <%= org.name %> address</label>
+    </div>
+    <div class="col s8">
+      <p>
+        This directs all paper check payments go to your address as set in Payroll Settings.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <button class="waves-effect waves-light btn-large" id="save">Save</button>
+</div>
+
+
+<% include ../partials/footer.html %>

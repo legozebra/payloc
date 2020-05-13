@@ -1,0 +1,51 @@
+<% include ../partials/header.html %>
+<% include ../partials/settings.html %>
+
+<script>
+  window.googleMapsKey = '<%- googleMapsKey -%>';
+  window.initGoogleMaps();
+</script>
+<% if (false) { %>
+<!--<script type="text/javascript" src='http://maps.google.com/maps/api/js?key=<%- googleMapsKey -%>&libraries=places&callback=initMap'></script>-->
+<% } else { %>
+<!--<script type="text/javascript" src='http://maps.google.com/maps/api/js?key=<%- googleMapsKey -%>&libraries=places'></script>-->
+<% } %>
+<script>
+  window.GPSInfo = '<%- GPSInfo -%>';
+  window.GPSSetup = <%- GPSSetup -%>;
+  window.timezone = '<%- timezone -%>'
+</script>
+
+<h5>Geofencing Settings</h5>
+<div class="row">
+  <p>
+      <input type="checkbox" id="enforce"<%- GPSEnforcementChecked -%> />
+      <label for="enforce">Enforce Geofencing For Punch Cards</label>
+  </p>
+</div>
+<% if (false) { %>
+<div class="row">
+  <div id="map"></div>
+</div>
+<% } %>
+<div id="locationPickerDiv">
+  <div class="row">
+    <div class="col s7" id="companyAddressWrapper">
+      Company Address: <input type="text" id="us2-address" />
+      <input type="hidden" id="us2-lat"/>
+      <input type="hidden" id="us2-lon"/>
+    </div>
+    <div class="col s5" id="radiusSelector">
+      Radius (meter):
+      <input type="text" id="us2-radius"/>
+    </div>
+  </div>
+  <div class="row" id="theMap">
+    <div id="companyLocation" style="height: 400px;"></div>
+  </div>
+</div>
+<div class="row">
+  <a id="save" class="waves-effect waves-light btn-large"><i class="material-icons left">save</i>Save Settings</a>
+</div>
+
+<% include ../partials/footer.html %>

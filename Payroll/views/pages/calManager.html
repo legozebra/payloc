@@ -1,0 +1,112 @@
+<% include ../partials/header.html %>
+<% include ../partials/settings.html %>
+<h5>Schedule Manager</h5>
+ <p>Manage your employees' shifts here. </p>
+<div class="row">
+  <div class="col s12 m9 l9">
+    <div id='calendar'></div>
+  </div>
+  <div class="col hide-on-small-only m3 l3" id="estimationCard" style="display: none">
+    <div class="card blue-grey lighten-1">
+      <div class="card-content white-text">
+        <span class="card-title">Insight</span>
+        <div id="estimation"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div id="createNewShiftModal" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>Create a new shift</h4>
+        <div class="row">
+          <div class="col s2">
+            Workers
+          </div>
+          <div class="col s10">
+            <select id="employeeSelecter" required="required">
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input value="" id="timeStart" type="text" class="validate" disabled="disabled">
+            <label class="active" for="timeStart">Start Time</label>
+          </div>
+            <div class="input-field col s6">
+              <input value="" id="timeEnd" type="text" class="validate" disabled="disabled">
+              <label class="active" for="timeEnd">End Time</label>
+            </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s5" id="shiftCap">
+            <input value="" id="shiftCap" type="number" class="validate" required="required">
+            <label class="active" for="shiftCap">Maximum # of Employees</label>
+          </div>
+            <div class="input-field col s12">
+              <input value="" id="note" type="text" class="validate" required="required">
+              <label class="active" for="note">Notes</label>
+            </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select id="recurrence">
+              <option value="0" selected>One Time Only</option>
+              <option id="daily" value="">Daily</option>
+              <option value="1">Weekly</option>
+              <option value="2">Bi-Weekly</option>
+              <option value="4">Monthly</option>
+            </select>
+            <label>Recurrence</label>
+          </div>
+        </div>
+        <div class="row" id="dp">
+          <div class="input-field col s12">
+            <input type="date" id="until" class="datepicker">
+            <label class="active" for="until">Recur Until</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer row">
+        <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">Cancel</a>
+        <a id="createAction" href="#" class="modal-action waves-effect waves-green btn-flat">Create</a>
+      </div>
+    </div>
+
+    <div id="shiftInfo" class="modal">
+      <div class="modal-content">
+        <h4><div id="shiftInfoTitle"></div></h4>
+        <div class="row">
+          <div class="column s12">
+            <p><div id="employees"></div></p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a id="delete" class="modal-action modal-close waves-effect waves-red btn-flat">Delete</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">Dismiss</a>
+      </div>
+    </div>
+
+    <div id="wait" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <div class="row">
+          <div class="column s12 waitCentered">
+            <div class="preloader-wrapper big active">
+              <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+            <p> Please Wait </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/footer.html %>

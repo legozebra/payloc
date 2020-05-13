@@ -1,0 +1,46 @@
+<% include ../../partials/header.html %>
+<script>
+    window.payId = '<%= payId %>';
+</script>
+<h5>Payment for <%= employeeId.name %></h5>
+<form id="payRecordView">
+    <div class="row">
+        <div class="input-field col s6">
+            <input id="employeeName" type="text" class="validate" disabled value="<%= employeeId.name %>">
+            <label for="employeeName">Employee Name</label>
+        </div>
+        <div class="input-field col s6">
+            <input id="amount" type="text" class="validate" disabled value="$<%= amount %>">
+            <label for="amount">Amount</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <input id="date" type="text" class="validate" disabled value="<%= humanDate %>">
+            <label for="date">Pay Date</label>
+        </div>
+        <div class="input-field col s6">
+            <input id="method" type="text" class="validate" disabled value="<%= method %>">
+            <label for="method">Payment Method</label>
+        </div>
+    </div>
+    <div class="row">
+        Clock records paid in this payment:
+        <table id="table" class="table striped">
+            <thead>
+            <th color="black">Title</th>
+            <th>Worked Minutes</th>
+            <th>Amount</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <p>
+            If you have not receive payment within 7 days of the pay date, please <a id="contactBtn">submit a support request</a>
+        </p>
+    </div>
+</form>
+
+<% include ../../partials/footer.html %>

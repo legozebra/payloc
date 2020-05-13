@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <link href='/css/materialize.min.css' rel='stylesheet' />
+  <link href='/css/calendar/fullcalendar.min.css' rel='stylesheet' />
+  <link href='/css/calendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+  <script src='/js/calendar/moment.min.js'></script>
+  <script src='/js/jquery.min.js'></script>
+  <script src='/js/calendar/fullcalendar.min.js'></script>
+  <script src='/js/materialize.min.js'></script>
+  <script>
+  $(document).ready(function() {
+    $('.modal').modal();
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: '',
+        right: 'basicWeek,basicDay'
+      },
+      defaultView: 'basicWeek',
+      navLinks: true, // can click day/week names to navigate views
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      eventSources: [
+        {
+          url: '/scheduler/schedule/tradeOff/<%- shiftId -%>' // 
+
+        }
+      ],
+      eventRender: function(event, element) {
+          setTimeout(() => {
+            $('#toolTip').modal('open');
+          }, 300)
+      },
+      eventClick: function(calEvent, jsEvent, view) {
+        $('#shiftInfoTitle').text(calEvent.start.format('MMMM DD: HH A') + ' - ' + calEvent.end.format('HH A'))
+        $('#employees').html(calEvent.title.replace(/(?:\r\n|\r|\n)/g, '<br />'))
+        $('#shiftInfo').modal('open');
+      }
+    });
+  });
+  </script>
+  <style>
+    body {
+      margin: 40px 10px;
+      padding: 0;
+      font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+      font-size: 14px;
+    }
+    #calendar {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div id='calendar'></div>
+
+
+  <div id="toolTip" class="modal">
+    <div class="modal-content">
+      <h4>Trade Shift</h4>
+      <p>We have suggested a list of shifts you can trade with. Please click on a shift that works the best for you. </p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Get Started</a>
+    </div>
+  </div>
+</body>
+</html>

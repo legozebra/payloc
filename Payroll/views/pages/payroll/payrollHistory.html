@@ -1,0 +1,20 @@
+<% include ../../partials/header.html %>
+<%if (url !== '/payroll/employee') { %> <% include ../../partials/settings.html %> <% } %>
+
+<h5>Payroll History</h5>
+<p>You can find <%if (url === '/payroll/employee') { %>your own pay stubs <% } else { %>all payment records within <%= org.name %><%} %> below. Click on Details link for additional information. </p>
+<form id="payroll">
+    <table id="table" class="table striped">
+        <thead>
+        <th color="black">Date</th>
+        <th>Employee Name</th>
+        <th>Amount</th>
+        <th>Payment Method</th>
+        <th>Details</th>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</form>
+
+<% include ../../partials/footer.html %>

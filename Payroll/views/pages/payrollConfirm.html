@@ -1,0 +1,68 @@
+<% include ../partials/header.html %>
+<script>
+  var payrollid = '<%= payrollId -%>';
+  var table = JSON.parse('<%- table -%>');
+  window.testmode = <%= testmode %>;
+</script>
+<script src="../js/jquery.dynatable.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/jquery.dynatable.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../css/payroll.css">
+<div class="row" id="pageTitle">
+  <p>Run Payroll - Preview</p>
+</div>
+<form id="payroll">
+  <table id="table" class="table striped">
+    <thead>
+      <th color="black">Name</th>
+      <th>Hourly Rate</th>
+      <th>Pretax Payment</th>
+      <th>Tax Withholding</th>
+      <th>Aftertax Payment</th>
+      <th>Payout Method</th>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</form>
+<div class="row" id="actions">
+  <button class="btn waves-effect waves-light" id="goBack">Go Back
+  </button>
+  <button class="btn waves-effect waves-light" id="action">Pay
+    <i class="material-icons right">send</i>
+  </button>
+</div>
+
+<div id="info">
+  <p>Payment total: $<%- total -%></p>
+  <p>Once submitted, the payroll cannot be reverted. Please ensure the payment information is accurate. </p>
+  <% if (testmode) {
+  %>
+  <p><b>Test Mode is Enabled. This transaction will not result in real payment</b></p>
+  <% } %>
+</div>
+
+<div id="wait" class="modal modal-fixed-footer">
+  <div class="modal-content">
+    <div class="row">
+      <div class="column s12 waitCentered">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+          </div>
+        </div>
+        <p> Running Payroll </p>
+        <p> Please Do Not Leave This Page </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<% include ../partials/footer.html %>

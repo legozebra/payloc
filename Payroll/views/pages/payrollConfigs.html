@@ -1,0 +1,54 @@
+<% include ../partials/header.html %>
+<% include ../partials/settings.html %>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  window.stripePk = "<%= stripePk %>";
+</script>
+<h5>Payroll Settings</h5>
+<p>How would <%- org.name -%> pay its employees through PayLoc?</p>
+<div class="row" id="ach">
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="routing_number" type="text" class="validate" required="required" value="<%= stripe.routing_number ? stripe.routing_number : '' %>">
+      <label for="routing_number">Routing Number of Your Payout Account</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="account_number" type="text" class="validate" required="required" value="<%= stripe.last4 ? '********' + stripe.last4 : '' %>">
+      <label for="account_number">Account Number of Your Payout Account</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="account_payer" type="text" class="validate"  value="<%= stripe.account_holder_name ? stripe.account_holder_name : org.name %>" required="required">
+      <label for="account_payer">Payer Name</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="primary_line" type="text" class="validate" required="required" value="<%= payout.address_line1 ? payout.address_line1 : '' %>">
+      <label for="primary_line">Address Line 1</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="secondary_line" type="text" class="validate" value="<%= payout.address_line2 ? payout.address_line2 : '' %>">
+      <label for="secondary_line">Address Line 2 (optional)</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="zip" type="text" class="validate" value="<%= payout.address_zip ? payout.address_zip : '' %>">
+      <label for="zip">ZIP Code</label>
+    </div>
+  </div>
+</div>
+
+
+  <div class="row">
+    <button class="waves-effect waves-light btn-large" id="save"><i class="material-icons left">security</i>Save Securely</button>
+  </div>
+
+
+<% include ../partials/footer.html %>

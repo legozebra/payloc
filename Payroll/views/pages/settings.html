@@ -1,0 +1,63 @@
+<% include ../partials/header.html %>
+<script>
+  window.payoutMethod = '<%- payoutMethod -%>';
+  window.stripeSetup = 'https://connect.stripe.com/express/oauth/authorize?redirect_uri=<%- stripeRedirect -%>&client_id=<%- stripeClientId -%>&state=<%- state -%>'
+</script>
+<p>How would you prefer to receive your payment from <%- org.name -%>?</p>
+<div class="row">
+  <p>
+      <input name="paymentmethod" type="radio" id="check" value="check" />
+      <label for="check">Paper Check</label>
+    </p>
+    <p>
+      <input name="paymentmethod" type="radio" id="stripe" value="stripe" />
+      <label for="stripe">Direct Deposit</label>
+    </p>
+</div>
+
+<div class="row" id="checkView">
+  <form class="col s12" method="post" action="/settings">
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="primary_line" type="text" class="validate" required="required" value="<%= payout.address_line1 ? payout.address_line1 : '' %>">
+        <label for="primary_line">Address Line 1</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="secondary_line" type="text" class="validate" value="<%= payout.address_line2 ? payout.address_line2 : '' %>">
+        <label for="secondary_line">Address Line 2 (optional)</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="zip" type="text" class="validate" value="<%= payout.address_zip ? payout.address_zip : '' %>">
+        <label for="zip">ZIP Code</label>
+      </div>
+    </div>
+    <div class="row">
+      <a id="saveAddr" class="waves-effect waves-light btn-large"><i class="material-icons left">send</i>Save Address</a>
+    </div>
+  </form>
+</div>
+
+<div class="row" id="stripeView">
+  <div class="row">
+    <p>PayLoc uses Stripe to get you paid quickly and keep your personal and payment information secure. Thousands of companies around the world trust Stripe to process payments for their users. Plase click the button below to set up a Stripe account to get paid with PayLoc.</p>
+    <p>Stripe is certified to PCI Service Provider Level 1, the most stringent certification available in the payments industry. PayLoc is compliant to PCI Data Security Standard under SAQ-A. Your information is secure. </p>
+  </div>
+  <div class="row">
+    <button class="waves-effect waves-light btn-large" id="connectStripe"><i class="material-icons left">security</i>Set up direct deposit</button>
+  </div>
+</div>
+
+<div class="row" id="stripeInfo">
+  <div class="row">
+    <p>You are currently receiving payment via direct deposit. If you would like to review your current settings, please click the button below.</p>
+  </div>
+  <div class="row">
+    <button class="waves-effect waves-light btn-large" id="loginStripe"><i class="material-icons left">security</i>Review Direct Deposit</button>
+  </div>
+</div>
+
+<% include ../partials/footer.html %>

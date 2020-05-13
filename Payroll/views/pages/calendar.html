@@ -1,0 +1,120 @@
+<% include ../partials/header.html %>
+  <div id='calendar'></div>
+
+  <div id="shiftInfo" class="modal">
+      <div class="modal-content">
+        <h4><div id="shiftInfoTitle"></div></h4>
+        <div class="row">
+          <div class="column s12">
+            <p><div id="employees"></div></p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a id="tradeOffAction" href="#" class="modal-action waves-effect waves-red btn-flat">Exchange With Someone</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">Dismiss</a>
+      </div>
+    </div>
+
+    <div id="tradeShift" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>Exchange Shift</h4>
+        <div class="row">
+          <p>The calendar below lists possible exchanges you can make with your co-workers. Once an exchange is made, they would work to cover your absence, and you would work on their shift. </p>
+          <p>This change is one-time only and does not require manager approval. You can review the final details once you select a slot below that works for you. </p>
+          <p>Do not see a shift that you want to trade with? This <a href="https://help.payloc.io/scheduling/find-a-shift-to-exchange-with" target="_blank">article</a> might help! </p>
+        </div>
+        <div class="row">
+          <div id="tradeShiftCal" class="modalCal"></div>
+        </div>
+      </div>
+      <div class="modal-footer row">
+        <div id="shiftChangePrompt" class="col s10">
+          <p>Please click on a calendar block to request a shift change</p>
+        </div>
+        <div class="col s2">
+          <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">Cancel</a>
+        </div>
+        <a id="tradeOffSubmit" href="#" class="modal-action waves-effect waves-green btn-flat">Request Trade</a>
+      </div>
+    </div>
+
+    <div id="requesteeSelect" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>Who would you like to exchange with?</h4>
+        <div class="row">
+          <p>Please select a coworker with whom to exchange a shift. </p>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select id="requesteeSelector">
+              <option value="" disabled selected></option>
+            </select>
+            <label>Select a co-worker</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer row">
+        <a id="backCalView" href="#!" class="modal-action waves-effect waves-blue btn-flat">Back</a>
+        <a id="requesteeSelectAction" href="#" class="modal-action waves-effect waves-green btn-flat">Continue</a>
+      </div>
+    </div>
+
+    <div id="tradeInfo" class="modal">
+      <div class="modal-content">
+        <h4>Review</h4>
+        <div class="row">
+          <p>Please review the proposed change is correct. After you click Request, your co-worker will be notified to accept or ignore the shift exchange request. </p>
+        </div>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="col s6">
+                <h5>Your Shift</h5>
+                <div class="input-field">
+                  <input disabled value="" id="date" type="text" class="validate">
+                  <label for="date">Date</label>
+                </div>
+                <div class="input-field">
+                  <input disabled value="" id="startTime" type="text" class="validate">
+                  <label for="startTime">Start Time</label>
+                </div>
+                <div class="input-field">
+                  <input disabled value="" id="endTime" type="text" class="validate">
+                  <label for="endTime">End Time</label>
+                </div>
+                <div class="input-field">
+                  <input disabled value="" id="duration" type="text" class="validate">
+                  <label for="duration">Duration</label>
+                </div>
+              </div>
+              <div class="col s6">
+                <h5><div id="requesteeName"></div></h5>
+                <div class="input-field">
+                  <input disabled value="" id="requestee_date" type="text" class="validate">
+                  <label for="date">Date</label>
+                </div>
+                <div class="input-field">
+                  <input disabled value="" id="requestee_startTime" type="text" class="validate">
+                  <label for="startTime">Start Time</label>
+                </div>
+                <div class="input-field">
+                  <input disabled value="" id="requestee_endTime" type="text" class="validate">
+                  <label for="endTime">End Time</label>
+                </div>
+                <div class="input-field">
+                  <input disabled value="" id="requestee_duration" type="text" class="validate">
+                  <label for="duration">Duration</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer row">
+        <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">Cancel</a>
+        <a id="tradeOffSubmitBtn" href="#" class="modal-action waves-effect waves-green btn-flat">Request</a>
+      </div>
+    </div>
+
+    <% include ../partials/footer.html %>

@@ -1,0 +1,80 @@
+<% include ../../partials/header.html %>
+<% include ../../partials/settings.html %>
+<script>
+    window.payId = '<%= payId %>';
+</script>
+<h5>Payment for <%= employeeId.name %></h5>
+<form id="payRecordView">
+    <div class="row">
+        <div class="input-field col s6">
+            <input id="employeeName" type="text" class="validate" disabled value="<%= employeeId.name %>">
+            <label for="employeeName">Employee Name</label>
+        </div>
+        <div class="input-field col s6">
+            <input id="amount" type="text" class="validate" disabled value="$<%= amount %>">
+            <label for="amount">Amount</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <input id="date" type="text" class="validate" disabled value="<%= humanDate %>">
+            <label for="date">Date</label>
+        </div>
+        <div class="input-field col s6">
+            <input id="method" type="text" class="validate" disabled value="<%= method %>">
+            <label for="method">Payment Method</label>
+        </div>
+    </div>
+    <% if (type === "lob") {
+    %>
+    <div class="row">
+        <div class="input-field col s6">
+            <p>A copy of the check is available <a href="<%= getCheckUrl %>">Here</a>. </p>
+        </div>
+        <div class="input-field col s6">
+            <input id="checkSerial" type="text" class="validate" disabled value="<%= paymentInfo.check_number %>">
+            <label for="checkSerial">Check Serial Number</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <input id="bank" type="text" class="validate" disabled value="<%= paymentInfo.bank_account.bank_name %>">
+            <label for="bank">Outgoing Bank</label>
+        </div>
+        <div class="input-field col s6">
+            <input id="bankAcctNum" type="text" class="validate" disabled value="********<%= String(paymentInfo.bank_account.account_number).slice(-4) %>">
+            <label for="bankAcctNum">Account Number</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <input id="addressLine" type="text" class="validate" disabled value="<%= paymentInfo.to.address_line1 %> <%= paymentInfo.to.address_line2 %>, <%= paymentInfo.to.address_city %> <%= paymentInfo.to.address_state %> <%= paymentInfo.to.address_zip %>">
+            <label for="addressLine">Recipient Address</label>
+        </div>
+        <div class="input-field col s6">
+            <input id="ZIPCode" type="text" class="validate" disabled value="<%= paymentInfo.to.date_modified %>">
+            <label for="ZIPCode">Address Modified</label>
+        </div>
+    </div>
+    <%
+    } %>
+    <div class="row">
+        Clock records paid in this payment:
+        <table id="table" class="table striped">
+            <thead>
+            <th color="black">Title</th>
+            <th>Worked Minutes</th>
+            <th>Amount</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <p>
+            If you need more information about this payment, please click <a id="researchBtn">Here</a>
+        </p>
+    </div>
+</form>
+
+<% include ../../partials/footer.html %>
