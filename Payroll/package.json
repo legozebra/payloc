@@ -58,7 +58,7 @@
     "materialize-css": "^0.100.2",
     "moment": "^2.19.1",
     "moment-timezone": "^0.5.14",
-    "mongoose": "^4.9.5",
+    "mongoose": "^5.7.5",
     "p-iteration": "^1.1.5",
     "path": "^0.12.7",
     "randomstring": "^1.1.5",
