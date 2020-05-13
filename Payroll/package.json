@@ -50,7 +50,7 @@
     "glob": "^7.1.2",
     "hammerjs": "^2.0.8",
     "intercom-client": "^2.9.1",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "jquery-locationpicker": "^0.1.12",
     "le_node": "^1.7.1",
     "lob": "^4.0.0",
