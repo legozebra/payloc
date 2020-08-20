@@ -30,7 +30,7 @@
     "@babel/core": "^7.0.0-beta.34",
     "@babel/preset-env": "^7.0.0-beta.34",
     "basic-auth": "^1.1.0",
-    "bcrypt": "^1.0.2",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.17.1",
     "bunyan": "^2.0.2",
     "bunyan-sentry-stream": "^1.2.1",
