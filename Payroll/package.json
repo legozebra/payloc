@@ -71,7 +71,7 @@
     "sparkpost": "^2.1.2",
     "stripe": "^4.23.1",
     "sweetalert": "^2.0.8",
-    "underscore": "^1.8.3",
+    "underscore": "^1.12.1",
     "universal-analytics": "^0.4.15",
     "uuid": "^3.1.0",
     "validator": "^7.1.0"
