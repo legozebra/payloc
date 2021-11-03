@@ -64,7 +64,7 @@
     "stripe": "^5.1.1",
     "twilio": "^3.17.5",
     "uuid": "^3.1.0",
-    "validator": "^7.1.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
