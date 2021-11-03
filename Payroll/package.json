@@ -74,7 +74,7 @@
     "underscore": "^1.8.3",
     "universal-analytics": "^0.4.15",
     "uuid": "^3.1.0",
-    "validator": "^7.1.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
