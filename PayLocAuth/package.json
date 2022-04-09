@@ -54,7 +54,7 @@
     "jquery-ui": "^1.12.1",
     "js-file-download": "^0.4.1",
     "json2csv": "^3.11.5",
-    "moment": "^2.20.1",
+    "moment": "^2.29.2",
     "mongoose": "^4.9.5",
     "random-words": "0.0.1",
     "randomstring": "^1.1.5",
