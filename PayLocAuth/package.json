@@ -30,7 +30,7 @@
   "dependencies": {
     "@babel/core": "^7.0.0-beta.34",
     "@babel/preset-env": "^7.0.0-beta.34",
-    "async": "^2.5.0",
+    "async": "^2.6.4",
     "atob": "^2.0.3",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.17.1",
